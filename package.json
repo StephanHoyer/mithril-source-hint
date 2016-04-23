@@ -1,0 +1,28 @@
+{
+  "name": "mithril-source-hint",
+  "version": "1.0.0",
+  "description": "Find file where domnode was created",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanHoyer/mithril-source-hint.git"
+  },
+  "keywords": [
+    "mithril",
+    "source",
+    "map"
+  ],
+  "author": "Stephan Hoyer <ste.hoyer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StephanHoyer/mithril-source-hint/issues"
+  },
+  "homepage": "https://github.com/StephanHoyer/mithril-source-hint#readme",
+  "dependencies": {
+    "error-stack-parser": "1.3.5",
+    "stacktrace-gps": "2.4.1"
+  }
+}
