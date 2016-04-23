@@ -1,4 +1,7 @@
 # mithril-source-hint
+
+![test](https://cloud.githubusercontent.com/assets/54701/14764300/2a3e868a-09b3-11e6-993c-e5d361e80519.gif)
+
 With a growing [Mithril](https://lhorie.github.io/mithril/) app, you (or your
 coworkers) may sometimes wonder, where a specific DOM element comes from.
 
