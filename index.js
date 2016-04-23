@@ -5,22 +5,22 @@ var errorparser = require('error-stack-parser');
 var stacktracGps = require('stacktrace-gps');
 var gps = new stacktracGps();
 
-var debugCount = 0;
-
 module.exports = function() {
-  var className = 'template-hint-' + debugCount++;
   var res = mithril.apply(null, arguments);
-  var stack = errorparser.parse(new Error('boom'));
-  gps.getMappedLocation(stack[1]).then(function(location) {
-    var loc = location.fileName + ':' + location.lineNumber;
-    var el = document.getElementsByClassName(className)[0];
-    if (el) {
-      el.classList.remove(className);
-      el.title = el.title || loc;
-      el.dataset.debugLocation = loc;
+  var error = new Error('boom');
+  var title;
+  res.attrs.onmouseover = function(event) {
+    event.stopPropagation();
+    var el = event.currentTarget;
+    if (!title) {
+      var stack = errorparser.parse(error);
+      gps.getMappedLocation(stack[1]).then(function(location) {
+        el.title = location.fileName + ':' + location.lineNumber;
+      });
+    } else {
+      el.title = title;
     }
-  });
-  res.attrs.className += ' ' + className;
+  };
   return res;
 };
 
