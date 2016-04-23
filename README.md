@@ -1,4 +1,4 @@
-# mdebug
+# mithril-source-hint
 With a growing [Mithril](https://lhorie.github.io/mithril/) app, you (or your
 coworkers) may sometimes wonder, where a specific DOM element comes from.
 
