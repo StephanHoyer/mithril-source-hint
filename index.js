@@ -7,6 +7,7 @@ var gps = new stacktracGps();
 
 module.exports = function() {
   var res = mithril.apply(null, arguments);
+  var onmouseover = res.attrs.onmouseover;
   var error = new Error('boom');
   var title;
   res.attrs.onmouseover = function(event) {
@@ -19,6 +20,9 @@ module.exports = function() {
       });
     } else {
       el.title = title;
+    }
+    if(onmouseover) {
+      onmouseover.apply(this, arguments);
     }
   };
   return res;
