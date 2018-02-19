@@ -1,53 +1,28 @@
 {
-  "_from": "mithril-source-hint",
-  "_id": "mithril-source-hint@1.0.0",
-  "_inBundle": false,
-  "_integrity": "sha1-GToHe4ewFargPf8ohER+ObsMnCg=",
-  "_location": "/mithril-source-hint",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "tag",
-    "registry": true,
-    "raw": "mithril-source-hint",
-    "name": "mithril-source-hint",
-    "escapedName": "mithril-source-hint",
-    "rawSpec": "",
-    "saveSpec": null,
-    "fetchSpec": "latest"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/mithril-source-hint/-/mithril-source-hint-1.0.0.tgz",
-  "_shasum": "193a077b87b015aae03dff2884447e39bb0c9c28",
-  "_spec": "mithril-source-hint",
-  "_where": "/Users/sh/Work/tutory/webapp",
-  "author": {
-    "name": "Stephan Hoyer",
-    "email": "ste.hoyer@gmail.com"
-  },
-  "bugs": {
-    "url": "https://github.com/StephanHoyer/mithril-source-hint/issues"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "error-stack-parser": "2.0.1",
-    "stacktrace-gps": "2.4.4"
-  },
-  "deprecated": false,
+  "name": "mithril-source-hint",
+  "version": "1.0.0",
   "description": "Find file where domnode was created",
-  "homepage": "https://github.com/StephanHoyer/mithril-source-hint#readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StephanHoyer/mithril-source-hint.git"
+  },
   "keywords": [
     "mithril",
     "source",
     "map"
   ],
+  "author": "Stephan Hoyer <ste.hoyer@gmail.com>",
   "license": "MIT",
-  "main": "index.js",
-  "name": "mithril-source-hint",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/StephanHoyer/mithril-source-hint.git"
+  "bugs": {
+    "url": "https://github.com/StephanHoyer/mithril-source-hint/issues"
+  },
+  "homepage": "https://github.com/StephanHoyer/mithril-source-hint#readme",
+  "dependencies": {
+    "error-stack-parser": "2.0.1",
+    "stacktrace-gps": "2.4.4"
   }
 }
