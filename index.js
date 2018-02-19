@@ -1,33 +1,34 @@
-'use strict';
+'use strict'
 
-var mithril = require('mithril');
-var errorparser = require('error-stack-parser');
-var stacktracGps = require('stacktrace-gps');
-var gps = new stacktracGps();
+const mithril = require('mithril')
+const errorparser = require('error-stack-parser')
+const stacktraceGps = require('stacktrace-gps')
+const gps = new stacktraceGps()
 
 module.exports = function() {
-  var res = mithril.apply(null, arguments);
-  var onmouseover = res.attrs.onmouseover;
-  var error = new Error('boom');
-  var title;
-  res.attrs.onmouseover = function(event) {
-    event.stopPropagation();
-    var el = event.currentTarget;
+  const vnode = mithril.apply(null, arguments)
+  vnode.attrs = vnode.atts || {};
+  const onmouseover = vnode.attrs.onmouseover
+  const error = new Error('boom')
+  let title
+  vnode.attrs.onmouseover = function(event) {
+    event.stopPropagation()
+    const el = event.currentTarget
     if (!title) {
-      var stack = errorparser.parse(error);
+      const stack = errorparser.parse(error)
       gps.getMappedLocation(stack[1]).then(function(location) {
-        el.title = location.fileName + ':' + location.lineNumber;
-      });
+        el.title = location.fileName + ':' + location.lineNumber
+      })
     } else {
-      el.title = title;
+      el.title = title
     }
     if(onmouseover) {
       onmouseover.apply(this, arguments);
     }
   };
-  return res;
+  return vnode;
 };
 
-for (var key in mithril) {
-  module.exports[key] = mithril[key];
+for (const key in mithril) {
+  module.exports[key] = mithril[key]
 }
